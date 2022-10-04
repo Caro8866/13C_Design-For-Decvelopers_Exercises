@@ -1,8 +1,56 @@
-* {
-  margin: 0px;
-  padding: 0px;
+/*! Andy Bells' cs reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input {
+  border: none;
+}
+/* my own css from here */
 :root {
   /** Typography */
   --ff-primary: ;
@@ -36,10 +84,44 @@
   --fw-thin: ;
 
   /** Colours */
-  --color-primary1: ;
-  --color-primary2: ;
-  --color-secondary1: ;
-  --color-secondary2: ;
-  --color-accent1: ;
-  --color-accent2: ;
+  --color-primary1: #2b262a; /* Headings & buttons colour */
+  --color-primary2: #aaa7aa; /* p colour */
+  --color-secondary1: #ffffff; /* White */
+  --color-secondary2: #f2f2f2; /* Light grey */
+  --color-accent1: #d94f30; /* Orange button */
+  --color-accent2: #594946; /* Brown Text */
+}
+
+html {
+  background-color: var(--color-secondary2);
+}
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1100px;
+}
+
+header nav {
+  padding: 1rem 0;
+  background-color: #ffffff;
+  border-bottom: 1px rgb(196, 196, 196) solid;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+[value="SIGN UP"] {
+  background-color: var(--color-accent1);
+  color: var(--color-secondary1);
+  text-transform: capitalize;
+}
+
+[type="button"] {
+  padding: 0.1rem 1.5rem;
+  border-radius: 7px;
+  text-align: center;
 }
