@@ -1,7 +1,8 @@
 #stage {
   border: 2px solid black;
   border-radius: 16px;
-  height: 56.25vw;
+  /* height: 56.25vw; */
+  height: 75vw;
   overflow: hidden;
 }
 

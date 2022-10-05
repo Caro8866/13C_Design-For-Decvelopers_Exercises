@@ -4,7 +4,7 @@ const ball = document.querySelector("#ball");
 
 // Create keyframes and properties for falling and zoom
 const fallingProperties = {
-  duration: 2000,
+  duration: 5000,
   iterations: Infinity,
   easing: "ease-in-out",
 };
@@ -30,4 +30,9 @@ function ballClicked() {
   animation.pause();
   // start zoom-animation
   const zoomAnimation = ball.animate(zoomKeyframes, zoomProperties);
+  zoomAnimation.onfinish = (event) => {
+    console.log("Zoom has finished");
+    zoomAnimation.cancel();
+    animation.play();
+  };
 }
