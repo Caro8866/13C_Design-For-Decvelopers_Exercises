@@ -3,3 +3,22 @@
   height: 20rem;
   background-color: red;
 }
+
+body {
+  display: flex;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
+.green {
+  background-color: green;
+}
