@@ -1,5 +1,9 @@
 "use strict";
-import { animate } from "https://cdn.skypack.dev/motion";
+import { timeline, animate } from "https://cdn.skypack.dev/motion";
 
-animate(".ball", { translateX: 380, rotate: 200 }, { duration: 2 });
-animate(".ball", { scale: 0 }, { duration: 0.5, delay: 1.8 });
+const sequence = [
+  [".ball", { translateX: 400, rotate: 200 }, { duration: 2 }],
+  [".ball", { scale: 0 }, { duration: 0.5 }, { at: 1.8 }],
+];
+
+timeline(sequence);
