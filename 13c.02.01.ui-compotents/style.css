@@ -51,6 +51,12 @@ input {
   border: none;
 }
 /* my own css from here */
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 :root {
   /** Typography */
   --ff-primary: ;
@@ -73,15 +79,15 @@ input {
   --fs-primary-heading: ;
   --fs-secondary-heading: ;
 
-  --fw-black: ;
-  --fw-extra-bold: ;
-  --fw-bold: ;
-  --fw-medium: ;
-  --fw-semi-bold: ;
-  --fw-regular: ;
-  --fw-light: ;
-  --fw-extra-light: ;
-  --fw-thin: ;
+  --fw-black: 900;
+  --fw-extra-bold: 800;
+  --fw-bold: 700;
+  --fw-medium: 600;
+  --fw-semi-bold: 500;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --fw-extra-light: 200;
+  --fw-thin: 100;
 
   /** Colours */
   --color-primary1: #2b262a; /* Headings & buttons colour */
@@ -107,11 +113,25 @@ header nav {
   background-color: #ffffff;
   border-bottom: 1px rgb(196, 196, 196) solid;
 }
-
+header .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
 header nav ul {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  gap: 8vw;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+#logo em {
+  font-weight: var(--fw-black);
+  font-size: var();
 }
 
 [value="SIGN UP"] {
@@ -121,7 +141,32 @@ header nav ul {
 }
 
 [type="button"] {
-  padding: 0.1rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   border-radius: 7px;
   text-align: center;
+}
+
+h1,
+h1 + p {
+  text-align: center;
+  margin: auto;
+}
+
+h1 + p {
+  width: 40ch;
+  margin: auto;
+}
+
+#selection form {
+  display: flex;
+  flex-flow: nowrap column;
+}
+
+#selection form fieldset {
+  background-color: white;
+}
+
+.cardsList {
+  display: flex;
+  flex-flow: row;
 }
